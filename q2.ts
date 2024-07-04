@@ -1,9 +1,13 @@
 // define interface for Student object
-/* Your code here */
-
+interface Student {
+  name: string;
+  score: number;
+}
 // assign interface/type to the function definition properly
-function findTopNames(students) {
-  /* Your code here */
+function findTopNames(students:Student[]):string[] {
+  let filterStds = students.filter((std) => std.score > 8);
+  let mapName = filterStds.map((x) => x.name);
+  return mapName;
 }
 
 // assign interface/type to the student1 object properly
@@ -16,3 +20,6 @@ const students1 = [
 console.log(findTopNames(students1));
 
 module.exports = findTopNames;
+
+//รหัส นศ.: 660610779
+//ชื่อ-สกุล : พิมลนาฏ แก้วบุตร
