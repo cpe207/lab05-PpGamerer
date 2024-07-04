@@ -5,8 +5,8 @@ interface Student {
 }
 // assign interface/type to the function definition properly
 function findTopNames(students:Student[]):string[] {
-  let filterStds = students.filter((std) => std.score > 8);
-  let mapName = filterStds.map((std) => std.name);
+  let filterStds = students.filter((std:Student):boolean => std.score > 8);
+  let mapName = filterStds.map((std:Student):string => std.name);
   return mapName;
 }
 
